@@ -30,5 +30,7 @@ jobs:
         python3 djangoProject/scripts/tests.py
     - name: Run UI tests
       run: |
-        python3 -m unittest djangoProject/scripts/ui_tests.py --headless
+        sudo apt install google-chrome-stable
+        seleniumbase install chromedriver
+        python3 -m unittest djangoProject/scripts/ui_tests.py
 
