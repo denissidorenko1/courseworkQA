@@ -31,6 +31,5 @@ jobs:
     - name: Run UI tests
       run: |
         sudo apt install google-chrome-stable
-        seleniumbase install chromedriver
         python3 -m unittest djangoProject/scripts/ui_tests.py
 
