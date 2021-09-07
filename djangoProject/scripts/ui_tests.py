@@ -8,9 +8,9 @@ time.sleep(5)
 class Test2(unittest.TestCase):
     def setUp(self):
         options = webdriver.ChromeOptions()
-        options.add_argument('--headless')
+        #options.add_argument('--headless')
         options.add_experimental_option('w3c', False)
-
+        options.headless = True
         options.add_experimental_option("useAutomationExtension", False)
         options.add_argument('--disable-blink-features=AutomationControlled')
         options.add_experimental_option('excludeSwitches', ['enable-automation'])
