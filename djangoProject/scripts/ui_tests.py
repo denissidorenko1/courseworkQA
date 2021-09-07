@@ -30,7 +30,7 @@ class Test2(unittest.TestCase):
         send = driver.find_element_by_name("submit")
         send.click()
         path = driver.find_element_by_id("pth")
-        print(path.text)
+        #print(path.text)
         self.assertEqual(path.text, "Путь: 0 1")
 
     def testNoPath(self):
