@@ -12,7 +12,7 @@ class Test2(unittest.TestCase):
         options = webdriver.FirefoxOptions
         #options.add_argument('--headless')
         #options.add_experimental_option('w3c', False)
-        options.headless = True
+        #options.headless = True
         #options.add_argument('--no-sandbox')
         #options.add_argument('--disable-dev-shm-usage')
         #options.add_experimental_option("useAutomationExtension", False)
@@ -37,6 +37,7 @@ class Test2(unittest.TestCase):
         send.click()
         path = driver.find_element_by_id("pth")
         #print(path.text)
+        driver.quit()
         self.assertEqual(path.text, "Путь: 0 1")
 
     def testNoPath(self):
