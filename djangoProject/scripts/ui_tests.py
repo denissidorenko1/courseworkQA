@@ -8,6 +8,7 @@ time.sleep(5)
 class Test2(unittest.TestCase):
     def setUp(self):
         options = webdriver.ChromeOptions()
+        options.add_argument('--headless')
         options.add_experimental_option('w3c', False)
 
         options.add_experimental_option("useAutomationExtension", False)
