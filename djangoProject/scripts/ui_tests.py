@@ -11,6 +11,8 @@ class Test2(unittest.TestCase):
         #options.add_argument('--headless')
         options.add_experimental_option('w3c', False)
         options.headless = True
+        options.add_argument('--no-sandbox')
+        options.add_argument('--disable-dev-shm-usage')
         options.add_experimental_option("useAutomationExtension", False)
         options.add_argument('--disable-blink-features=AutomationControlled')
         options.add_experimental_option('excludeSwitches', ['enable-automation'])
@@ -32,7 +34,6 @@ class Test2(unittest.TestCase):
         send.click()
         path = driver.find_element_by_id("pth")
         #print(path.text)
-        driver.quit()
         self.assertEqual(path.text, "Путь: 0 1")
 
     def testNoPath(self):
@@ -44,7 +45,6 @@ class Test2(unittest.TestCase):
         send = driver.find_element_by_name("submit")
         send.click()
         path = driver.find_element_by_id("pth")
-        driver.quit()
         self.assertEqual(path.text, "Путь: Пути нет")
 
     def testDefault(self):
