@@ -7,7 +7,7 @@ time.sleep(5)
 class Test2(unittest.TestCase):
     def setUp(self):
         self.driver =webdriver.Chrome("C:\chromedriver\chromedriver.exe")
-        self.driver.get("http://127.0.0.1:8000/ru/routesearcher/")
+        self.driver.get("http://127.0.0.1:8000")
 
     def testSimplePath(self):
         driver= self.driver
